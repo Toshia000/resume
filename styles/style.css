@@ -5,20 +5,28 @@ html {
   letter-spacing: 5%;
 }
 
+:root {
+  --heading: rgb(230, 115, 0);
+  --link: darkblue;
+  --link-hover: blue;
+}
+
 h1 {
   font-size: xx-large;
+  color: var(--heading);
 }
 
 h2 {
   font-size: x-large;
+  color: var(--heading);
 }
 
 a {
   text-decoration: none;
-  color: darkblue;
+  color: var(--link);
 }
 
 a:hover {
   text-decoration: underline;
-  color: blue;
+  color: var(--link-hover);
 }
