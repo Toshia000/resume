@@ -14,6 +14,7 @@ html {
 h1 {
   font-size: xx-large;
   color: var(--heading);
+  grid-area: title;
 }
 
 h2 {
@@ -29,4 +30,23 @@ a {
 a:hover {
   text-decoration: underline;
   color: var(--link-hover);
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    ". title ."
+    ". content navigation";
+  grid-template-columns: minmax(0%, 30%) minmax(40%, 1000px) minmax(0%, 30%);
+}
+
+nav {
+  grid-area: navigation;
+  max-height: max-content;
+  position: sticky;
+  top: 0;
+}
+
+.content {
+  grid-area: content;
 }
