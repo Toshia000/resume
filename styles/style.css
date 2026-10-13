@@ -10,6 +10,7 @@ html {
 
 :root {
   --heading: rgb(230, 115, 0);
+  --image-border: rgb(230, 115, 0);
   --link: darkblue;
   --link-hover: blue;
 }
@@ -65,4 +66,9 @@ nav {
 
 .content {
   grid-area: content;
+}
+
+img {
+  border-radius: 10px;
+  border: 5px solid var(--image-border);
 }
