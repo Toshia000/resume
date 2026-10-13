@@ -1,8 +1,11 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: large;
-  line-height: 150%;
-  letter-spacing: 5%;
+
+  @media (min-width: 801px) {
+    font-size: large;
+    line-height: 150%;
+    letter-spacing: 5%;    
+  }
 }
 
 :root {
@@ -34,17 +37,30 @@ a:hover {
 
 body {
   display: grid;
-  grid-template-areas:
-    ". title ."
-    ". content navigation";
-  grid-template-columns: minmax(0%, 30%) minmax(40%, 1000px) minmax(0%, 30%);
+
+  @media (max-width: 800px) {
+    grid-template-areas:
+      "title"
+      "navigation"
+      "content";
+  }
+
+  @media (min-width: 801px) {
+    grid-template-areas:
+      ". title ."
+      ". content navigation";
+    grid-template-columns: minmax(0%, 30%) minmax(40%, 1000px) minmax(0%, 30%);
+  }
 }
 
 nav {
   grid-area: navigation;
-  max-height: max-content;
-  position: sticky;
-  top: 0;
+
+  @media (min-width: 801px) {
+    max-height: max-content;
+    position: sticky;
+    top: 0;
+  }
 }
 
 .content {
